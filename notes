@@ -1,0 +1,16 @@
+Part 1
+-create pv mysql_pv
+-create pvc mysql_pvc
+helm install mysql bitnami/mysql --set auth.rootPassword=[ROOT_PASSWORD] --set primary.persistence.existingClaim=[EXISTING_PVC]
+-modify access rules for root user
+
+-create service on port 303306
+-test with mysql workbench
+
+Part 2
+-create ingress
+-test with mysql workbench
+
+
+
+
