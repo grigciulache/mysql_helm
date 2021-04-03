@@ -1,5 +1,6 @@
 Part 1
 -create pv mysql_pv
+kubectl apply -f mysql-pv.yaml
 -create pvc mysql_pvc
 helm install mysql bitnami/mysql --set auth.rootPassword=[ROOT_PASSWORD] --set primary.persistence.existingClaim=[EXISTING_PVC]
 -modify access rules for root user
